@@ -1,0 +1,157 @@
+/* ===========================
+   Featured Section - Premium Enhanced
+=========================== */
+.cs_featured {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 10px 0;
+  z-index: 1;
+}
+
+.cs_featured::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0, 101, 168, 0.65),
+    rgba(0, 0, 0, 0.45)
+  );
+  z-index: -1;
+}
+
+/* Row layout */
+.cs_featured .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px 0;
+
+}
+
+/* Column setup */
+.cs_featured .col-lg-3,
+.cs_featured .col-sm-6 {
+  flex: 1 1 22%;
+  max-width: 22%;
+  display: flex;
+}
+
+/* Glassy Card */
+.cs_iconbox {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 40px 25px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: all 0.45s ease;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  animation: fadeUp 0.9s ease forwards;
+  opacity: 0;
+}
+
+/* Scroll Animation */
+@keyframes fadeUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Hover Animation */
+.cs_iconbox:hover {
+  transform: translateY(-15px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Gradient Border Effect */
+.cs_iconbox::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b, #6a11cb, #2575fc);
+  background-size: 300% 300%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.45s ease, background-position 3s linear;
+}
+
+.cs_iconbox:hover::before {
+  opacity: 1;
+  background-position: right center;
+}
+
+/* Icon */
+.cs_iconbox_icon {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 2px;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+  transition: all 0.4s ease;
+}
+.cs_iconbox:hover .cs_iconbox_icon {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  transform: rotate(10deg) scale(1.1);
+}
+.cs_iconbox_icon img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+  transition: filter 0.3s ease;
+}
+.cs_iconbox:hover .cs_iconbox_icon img {
+  filter: brightness(0) invert(1);
+}
+
+/* Title & Subtitle */
+.cs_iconbox_title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+.cs_iconbox_subtitle {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #e2e2e2;
+}
+
+/* Hover Title Glow */
+.cs_iconbox:hover .cs_iconbox_title {
+  color: #ffb876;
+  text-shadow: 0 0 12px rgba(255, 184, 118, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .cs_featured .col-lg-3,
+  .cs_featured .col-sm-6 {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 575px) {
+  .cs_featured .col-lg-3,
+  .cs_featured .col-sm-6 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

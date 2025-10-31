@@ -1,0 +1,165 @@
+/* === General Page Layout === */
+.flights-page {
+  font-family: "Poppins", sans-serif;
+  color: #222;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+/* === Banner Section === */
+.banner-section {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  
+}
+
+.flights-banner {
+  width: 100%;
+  height: 100%;
+  margin-top:-40px;
+  object-fit: cover;
+  filter: brightness(70%);
+  transition: 0.3s ease;
+}
+
+.flights-banner:hover {
+  filter: brightness(80%);
+}
+
+/* === Modern Search Bar Overlay === */
+.search-bar {
+  position: absolute;
+  top: 58%;
+  left: 8%; /* slightly left on banner */
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 14px 28px;
+  border-radius: 60px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
+  transition: all 0.3s ease-in-out;
+}
+
+.search-bar:hover {
+  background: rgba(255, 255, 255, 0.92);
+  transform: translateY(-52%);
+}
+
+/* === Input Fields === */
+.search-bar input {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+  font-size: 15px;
+  width: 160px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  background: #fff;
+  box-shadow: 0 0 8px rgba(0, 120, 215, 0.3);
+}
+
+/* === Button === */
+.search-bar button {
+  background: linear-gradient(135deg, #0078d7, #005ea6);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 28px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.search-bar button:hover {
+  background: linear-gradient(135deg, #005ea6, #004080);
+  transform: scale(1.05);
+}
+
+/* === Flight List Section === */
+.flights-content {
+  max-width: 950px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.flights-content h2 {
+  color: #0078d7;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.no-flights {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+}
+
+/* === Individual Flight Cards === */
+.flights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.flight-card {
+  background: #f3f8ff;
+  border: 1px solid #e3eaff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.flight-card:hover {
+  background: #eaf3ff;
+  transform: translateY(-3px);
+}
+
+.flight-card h3 {
+  margin-bottom: 8px;
+  color: #0078d7;
+}
+
+.flight-card p {
+  margin: 3px 0;
+}
+
+.status {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.status.active {
+  background: #d1f7c4;
+  color: #256029;
+}
+
+.status.landed {
+  background: #cce5ff;
+  color: #004085;
+}
+
+.status.delayed {
+  background: #ffe8cc;
+  color: #856404;
+}

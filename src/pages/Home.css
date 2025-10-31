@@ -1,0 +1,908 @@
+/* ===============================
+   Global Styles
+================================= */
+* {
+  box-sizing: border-box;
+ 
+  padding: 0;
+}
+
+body, html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f6fa;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ===============================
+   Header
+================================= */
+.cs_site_header {
+  width: 80%;
+  background-color: #1e1e2f;
+  color: #f8f2f2;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.cs_main_header {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.cs_site_branding img {
+  height: 45px;
+  transition: transform 0.3s;
+}
+
+.cs_site_branding img:hover {
+  transform: scale(1.1);
+}
+
+.cs_main_header_center ul {
+  display: flex;
+  gap: 30px;
+}
+
+.cs_main_header_center li a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  padding: 5px 0;
+  transition: all 0.3s ease;
+}
+
+.cs_main_header_center li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #4CAF50;
+  transition: width 0.3s;
+}
+
+.cs_main_header_center li a:hover::after {
+  width: 100%;
+}
+
+.cs_main_header_right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cs_header_toolbox .cs_search_btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.cs_header_toolbox .cs_search_btn:hover {
+  color: #4CAF50;
+}
+
+/* ===============================
+   Hero Section
+================================= */
+.cs_hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 0 ;
+  overflow: hidden;
+  bottom: 10px;
+  margin-top: -40px;
+}
+
+.cs_hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.35));
+  z-index: 0;
+}
+
+.cs_hero_text {
+  position: relative;
+  z-index: 1;
+  animation: fadeInUp 1s ease forwards;
+}
+.cs_hero_subtitle {
+  font-size: 22px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #ffdc7d;
+  margin-top: 80px;
+}
+
+.cs_hero_title {
+  font-size: 60px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #fff;
+  margin-bottom: 25px;
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.4);
+}
+@media (max-width: 992px) {
+  .cs_hero_title {
+    font-size: 55px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cs_hero_title {
+    font-size: 38px;
+  }
+  .cs_hero_subtitle {
+    font-size: 18px;
+    margin-top: 50px;
+  }
+}
+.cs_hero_text h1 {
+  font-size: 60px; /* adjust for balance */
+  line-height: 1.1;
+  margin-bottom: 15px;
+}
+
+.cs_hero_text h3 {
+  font-size: 28px; /* previously 48px */
+  letter-spacing: 3px;
+  color: #ffdc7d; /* optional highlight color */
+  font-weight: 500;
+}
+
+
+
+.cs_find_form select, .cs_find_form input {
+  padding: 14px 20px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  min-width: 160px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+
+.cs_find_form select:hover, .cs_find_form input:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+.airplane-icon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #fff;
+  width: 50px;
+  height:50px;
+  font-size: 22px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.airplane-icon:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transform: scale(1.1);
+}
+
+.form-icons {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  display: flex;
+  gap: 10px;
+  z-index: 10 ;
+}
+
+.form-icon {
+  color: #ffffff;
+  font-size: 22px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+  padding: 8px;
+  transition: all 0.3s ease;
+  width: 40px;
+  height: 45px;
+}
+
+.form-icon:hover {
+  background: rgba(0, 0, 0, 0.45);
+  transform: scale(1.1);
+}
+
+/* This makes the selects + button align in one row */
+.cs_form_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: nowrap; /* 👈 ensures one line */
+}
+
+/* Form controls */
+.st_select {
+  padding: 10px 15px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  min-width: 170px;
+  background-color: #ffffff;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 600px) {
+  .cs_form_row {
+    flex-wrap: wrap; /* 👈 only stack on small screens */
+    justify-content: center;
+  }
+  .st_select,
+  .cs_find_btn {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+.cs_find_btn {
+  background: linear-gradient(90deg, #00aaff, #0077ff);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+.cs_find_btn:hover {
+  background: linear-gradient(90deg, #0077ff, #00aaff);
+  transform: scale(1.05);
+}
+
+/* ===============================
+   Animations
+================================= */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   Main Content
+================================= */
+.container {
+  max-width: 1300px;
+  margin: 0;
+}
+
+main {
+  padding: 60px 20px;
+}
+
+/* ===============================
+   Responsive
+================================= */
+@media (max-width: 1024px) {
+  .cs_hero_text h1 {
+    font-size: 60px;
+  }
+
+  .cs_hero_text h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cs_main_header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px 20px;
+  }
+
+  .cs_main_header_center ul {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .cs_hero_text h1 {
+    font-size: 42px;
+  }
+
+  .cs_hero_text h3 {
+    font-size: 60px;
+  }
+
+  
+}
+
+@media (max-width: 480px) {
+  .cs_hero_text h1 {
+    font-size: 28px;
+  }
+
+  .cs_hero_text h3 {
+    font-size: 46px;
+  }
+
+  .cs_find_form select, .cs_find_form input, .cs_find_btn {
+    width: 100%;
+  }
+}
+/* Parent Row */
+.cs_about .row.align-items-center.cs_gap_y_40 {
+  display: flex;            /* make it a flex container */
+  align-items: center;      /* vertically center columns */
+  gap: 2px;                /* optional spacing between columns */
+  flex-wrap: wrap;          /* wrap on small screens */
+}
+
+/* Image Column */
+.cs_about .col-lg-5 {
+  flex: 0 0 40%;            /* width 45% */
+  display: flex;             /* make images inside side by side */          /* space between images */
+  align-items: center;
+  text-align: left;
+  
+}
+
+.cs_about .col-lg-5 img {
+  width: 340px;
+  height: 430px;
+  left:40px;
+  margin-left: 100px;
+  
+}
+/*Read More*/
+.read-more-btn {
+  background-color: #ff6b35;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+
+.read-more-btn:hover {
+  background-color: #ff4f00;
+  transform: translateY(-2px);
+}
+
+/* Text Column */
+.cs_about .col-lg-6 {
+  flex: 0 0 50%;            /* width 50% */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* vertical center relative to images */
+  padding-left: 20px;
+  text-align: right;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .cs_about .row.align-items-center.cs_gap_y_40 {
+    flex-direction: column; /* stack on small screens */
+    gap: 10px;
+  }
+
+  .cs_about .col-lg-5,
+  .cs_about .col-lg-6 {
+    flex: 0 0 100%;
+    justify-content: center;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  
+}
+/* About Section Headings */
+.cs_about {
+  margin-bottom: 60px;
+}
+.cs_about .cs_section_title_up {
+  font-size: 60px; /* increased from 24px */
+}
+
+.cs_about .cs_section_title {
+  font-size: 30px; /* increased from 56px */
+  line-height: 1.2; /* optional for better spacing */
+}
+
+/* About Section Paragraphs */
+.cs_about_text p {
+  font-size: 20px; /* increase paragraph text size */
+  line-height: 1.6; /* improve readability */
+}
+
+/* Button */
+.cs_about .cs_btn {
+  font-size: 20px; /* slightly bigger button text */
+  padding: 12px 30px; /* optional: adjust button padding */
+}
+/* About Section Last Part (list + call-to-action) */
+.cs_about .cs_about_text + p,
+.cs_about .cs_list {
+  font-size: 20px; /* increase from 18px */
+  line-height: 1.6; /* better readability */
+}
+
+.cs_about .cs_list li {
+  margin-bottom: 10px; /* optional spacing between list items */
+}
+
+.cs_about .cs_list li i {
+  font-size: 18px; /* keep icon proportional */
+}
+/* Grid layout */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  padding: 10px;
+}
+
+/* Package card styling */
+.package-card {
+  position: relative;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Dark overlay on hover */
+.package-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 25px;
+  transition: background 0.4s ease;
+}
+
+.package-card:hover .package-overlay {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* Title always visible */
+.package-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Hide meta info and button initially */
+.package-meta,
+.package-action {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+
+/* Show them when hovering */
+.package-card:hover .package-meta,
+.package-card:hover .package-action {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Meta info */
+.package-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+/* Button and price container */
+.package-action {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Button style */
+.book-btn {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #fff;
+  color: #2acfcf;
+  border-color: #2acfcf;
+}
+
+/* Price style */
+.package-price {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* Hide button initially */
+
+
+section{
+  padding: 40px 0;
+}
+
+/* Base card style */
+.cs_card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.cs_card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(242, 238, 238, 0.587);
+}
+
+.cs_card_thumb {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.cs_card_thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.cs_card:hover .cs_card_thumb img {
+  transform: scale(1.1);
+}
+
+/* Overlay with hidden content */
+.cs_card_content {
+  position: absolute;
+  inset: 0;
+  background: rgba(222, 219, 219, 0.224);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  z-index: 2;
+  transition: all 0.4s ease;
+}
+
+/* When hovered, show overlay */
+.cs_card:hover .cs_card_content {
+  background: rgba(158, 156, 156, 0);
+  opacity: 1;
+}
+
+/* Title animation */
+.cs_card_title {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.cs_card:hover .cs_card_title {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Button styling */
+.dook-btn {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 6px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.4s ease;
+  z-index: 3;
+}
+
+/* Show button on hover */
+.cs_card:hover .dook-btn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button hover color change */
+.dook-btn:hover {
+  background-color: #fff;
+  color: #2acfcf;
+  border-color: #2acfcf;
+}
+.cs_find_form_wrap {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 45, 75, 0.45);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 14px;
+  padding: 18px 25px;
+  max-width: 500px;
+  display: inline-block;
+  margin-top: 50px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1.2s ease forwards;
+  transition: all 0.3s ease-in-out;
+  transform: scale(0.95); 
+}
+
+.cs_find_form_wrap:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.cs_find_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.form-top {
+  text-align: left;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Row containing inputs + button */
+.form-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* Dropdown style */
+.st_select {
+  padding: 8px 14px;
+  font-size: 15px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  min-width: 150px;
+  background-color: #ffffff;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: box-shadow 0.2s ease;
+}
+
+.st_select:focus {
+  box-shadow: 0 0 0 2px #00aaff;
+}
+
+
+.cs_find_form .form-heading {
+  font-size: 20px;
+  font-weight: 600;
+  color: #cdd1d8;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 10px;
+}
+
+
+@media (max-width: 600px) {
+  .cs_find_form_wrap {
+    padding: 25px 20px;
+    max-width: 100%;
+  }
+
+  .cs_find_form select.st_select,
+  .cs_find_btn {
+    width: 100%;
+  }
+}
+
+.cs_find_form h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #e4ecf9;
+  text-align: center;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.cs_find_form select.st_select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #ccd9ff;
+  border-radius: 10px;
+  background: #fff;
+  font-size: 15px;
+  color: #333;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.cs_find_form select.st_select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 8px rgba(59, 130, 246, 0.4);
+}
+
+.cs_find_form select.st_select:hover {
+  background-color: #f9fbff;
+}
+
+.cs_find_form option {
+  color: #333;
+  background: #fff;
+}
+
+
+/* === HOW IT WORKS SECTION === */
+.how-it-works {
+  text-align: center;
+  padding: 80px 10%;
+  background: #f8fbff;
+}
+
+.section-subtitle {
+  color: #00a6e0;
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 60px;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 60px;
+}
+
+.step-card {
+  max-width: 320px;
+  text-align: center;
+}
+
+.step-circle {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 25px;
+  border-radius: 50%;
+  border: 6px solid #00a6e0;
+  background: white;
+  box-shadow: 0 0 30px rgba(0, 166, 224, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.step-circle:hover {
+  box-shadow: 0 0 45px rgba(0, 166, 224, 0.6);
+  transform: scale(1.05);
+}
+
+.step-circle img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.step-number {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: #00a6e0;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 166, 224, 0.4);
+}
+
+.step-card h3 {
+  font-size: 1.2rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.step-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+.arrow-img {
+  margin-top: 90px;
+  width: 90px;
+  height: auto;
+}
+.step-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 100%;
+}

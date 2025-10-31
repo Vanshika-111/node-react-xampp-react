@@ -1,0 +1,475 @@
+/* ===============================
+   Video Section
+================================= */
+.cs_video_block {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cs_video_block .cs_player_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  background: rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cs_video_block .cs_player_btn:hover {
+  transform: scale(1.1);
+  background: rgba(0,0,0,0.7);
+}
+
+.cs_video_title {
+  position: absolute;
+  top: 20%;
+  left: 50px;
+  color: #fff;
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 600px;
+}
+
+.cs_location {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  color: #fff;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.cs_location i {
+  margin-right: 8px;
+}
+
+/* ===============================
+   Brands Section - Single Row
+================================= */
+.cs_brand_list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.cs_brand_list::-webkit-scrollbar {
+  display: none;
+}
+
+.cs_brand img {
+  max-height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ===============================
+   Blog Section
+================================= */
+
+.cs_blog_section {
+  background: #f9f9f9;
+  padding: 100px 0;
+}
+
+.cs_blog_section .cs_section_heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.cs_post {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
+}
+
+.cs_post:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.cs_post_thumb {
+  position: relative;
+  overflow: hidden;
+  height: 250px; /* Thumbnail ka visible height */
+}
+
+.cs_post_thumb img {
+  width: 100%;
+  height: 100%; /* Parent ke height ke equal */
+  object-fit: cover; /* Image ko nicely crop karega */
+  transition: transform 0.5s ease;
+}
+
+
+.cs_post:hover .cs_post_thumb img {
+  transform: scale(1.1);
+}
+
+.cs_date_box {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  background: #ff6f61;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.cs_date_box span {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cs_post_content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.cs_post_author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+.cs_post_author img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.cs_post_title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0d1b2a;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  transition: color 0.3s;
+}
+
+.cs_post:hover .cs_post_title {
+  color: #ff6f61;
+}
+
+.cs_post_content p {
+  font-size: 15px;
+  color: #666;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+
+.cs_post_footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  font-size: 14px;
+  color: #888;
+}
+
+.cs_comment {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.cs_more {
+  font-weight: 600;
+  color: #ff6f61;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.cs_more:hover {
+  color: #0d1b2a;
+}
+
+/* Responsive Blog Section */
+@media (max-width: 991px) {
+  .cs_post_thumb img {
+    height: 200px;
+  }
+
+  .cs_post_title {
+    font-size: 180px;
+  }
+
+  .cs_post_content {
+    padding: 20px;
+    gap: 10px;
+  }
+}
+
+
+.cs_blog_section .row.g-4 {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+   /* space between 2 posts */
+}
+
+.cs_blog_section .col-lg-6 {
+  display: 0 0 45%; /* har blog ki width 45% hogi */
+  max-width: 45%;
+}
+
+.cs_post {
+  flex: 1; /* dono posts ko equal width dega */
+}
+
+/* ===============================
+   Footer
+================================= */
+/* ===============================
+   Footer Styles
+================================= */
+.cs_footer {
+  position: relative;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+  margin-bottom: -60px;
+}
+
+.cs_newsletter_1_wrap {
+  margin-bottom: 60px;
+}
+
+.cs_newsletter {
+  background: linear-gradient(135deg, #ff6f61, #ff856f);
+  padding: 50px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-radius: 20px;
+  gap: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cs_newsletter:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.cs_newsletter_icon img {
+  width: 70px;
+  height: 70px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.cs_newsletter_title {
+  flex: 1 1 100%;
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  line-height: 1.2;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+
+.cs_newsletter_form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+}
+
+.cs_newsletter_form_field {
+  flex: 1;
+  padding: 15px 20px;
+  border-radius: 50px;
+  border: none;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.cs_newsletter_form_field:focus {
+  box-shadow: 0 0 10px rgba(255,111,97,0.5);
+}
+
+.cs_btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 30px;
+  background: #fff;
+  color: #ff6f61;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.cs_btn svg {
+  margin-left: 10px;
+}
+
+.cs_btn:hover {
+  background: #ff5547;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.cs_footer_main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.cs_footer_main_col {
+  flex: 1 1 250px;
+}
+
+.cs_footer_widget img {
+  max-width: 160px;
+  margin-bottom: 20px;
+}
+
+.cs_contact_widget li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cs_contact_widget p {
+  margin: 0;
+}
+
+.cs_social_btn a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  margin-right: 12px;
+  border-radius: 50%;
+  color: #fff;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+.cs_social_btn a:hover {
+  background: #fff;
+  color: #ff6f61;
+  transform: scale(1.1);
+}
+
+.cs_menu_widget,
+.cs_menu_widget_2 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cs_menu_widget li,
+.cs_menu_widget_2 li {
+  margin-bottom: 12px;
+}
+
+.cs_menu_widget a,
+.cs_menu_widget_2 a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.cs_menu_widget a:hover,
+.cs_menu_widget_2 a:hover {
+  color: #ff6f61;
+  transform: translateX(5px);
+}
+
+.cs_footer_bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 25px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 14px;
+  gap: 10px;
+}
+
+.cs_copyright {
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   Responsive
+================================= */
+@media (max-width: 991px) {
+  .cs_newsletter {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .cs_newsletter_form {
+    flex-direction: column;
+  }
+
+  .cs_newsletter_form_field,
+  .cs_btn {
+    width: 100%;
+  }
+
+  .cs_footer_main {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .cs_post_thumb img {
+    height: 200px;
+  }
+  .cs_post_title {
+    font-size: 18px;
+  }
+
+  .cs_newsletter_title {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,270 @@
+/* ---------- HERO ---------- */
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e")
+    center/cover no-repeat;
+  overflow: hidden;
+  margin-top: -80px;
+}
+
+.hero .overlay {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  padding: 40px;
+  border-radius: 20px;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #eee;
+}
+
+/* ---------- MISSION & VISION ---------- */
+.mission-vision {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  padding: 100px 5%;
+  background: #f7f7f7;
+  flex-wrap: wrap;
+}
+
+.mission-vision .card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 40px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.mission-vision .card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.mission-vision h2 {
+  font-size: 1.8rem;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+.mission-vision p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ---------- TIMELINE ---------- */
+.timeline {
+  background: linear-gradient(180deg, #f9f9f9, #fff);
+  padding: 100px 5%;
+  text-align: center;
+}
+
+.timeline h2 {
+  font-size: 2.2rem;
+  color: #222;
+  margin-bottom: 60px;
+}
+
+.timeline-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.timeline-container::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #222;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.timeline-item:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.timeline-item .circle {
+  width: 20px;
+  height: 20px;
+  background: #222;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.timeline-item .content {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 45%;
+  position: relative;
+}
+
+.timeline-item .year {
+  display: block;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.timeline-item p {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* ---------- TEAM ---------- */
+.team {
+  padding: 100px 5%;
+  text-align: center;
+  background: #fafafa;
+}
+
+.team h2 {
+  font-size: 2.3rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.team-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 260px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.team-card:hover {
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.team-img-container {
+  height: 200px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.team-img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.team-card:hover img {
+  transform: scale(1.08);
+}
+
+.team-card h3 {
+  color: #222;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.team-card p {
+  color: #777;
+  font-size: 0.95rem;
+}
+
+/* ---------- CTA ---------- */
+.cta {
+  background: linear-gradient(135deg, #111, #333);
+  color: #fff;
+  text-align: center;
+  padding: 100px 30px;
+  margin-bottom: -50px;
+}
+
+.cta h2 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  color: #ccc;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: #fff;
+  color: #111;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.cta-btn:hover {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .mission-vision {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .timeline-item .content {
+    width: 80%;
+  }
+
+  .timeline-container::before {
+    left: 10px;
+  }
+
+  .timeline-item:nth-child(even) {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  .timeline-item .circle {
+    left: 10px;
+    transform: none;
+  }
+}
